@@ -8,8 +8,21 @@
     </head>
 <body>
 
-    <div class="content">
-        <h1>Tax Calculator - PHP</h1>
+<?php
+        // Check if the "Calculate" button was pressed, then get the data from inputs
+        if (isset($_POST['monetaryAmmount']) && isset($_POST['taxPercentage'])) {
+            $monetaryAmmount = (float) $_POST['monetaryAmmount'];
+            $taxPercentage = (float) $_POST['taxPercentage'];
+        } else {
+            $monetaryAmmount = 0;
+            $taxPercentage = 0;
+        }
+        // Make the calculations
+        $taxAmount = round(($monetaryAmmount * $taxPercentage) / 100, 2);
+    ?>
+
+    <div class="content" style="text-align:center" >
+        <h1>Tax Calculator</h1>
         <form action="" method="POST" id="myForm">
             <label for="monetary">Monetary amount</label>
             <br>
@@ -21,17 +34,12 @@
             <input type="number" id="taxPercentage" name="taxPercentage" 
             value="<?=$taxPercentage ?>" required pattern="[0-9]" step="0.01" min="0" max="100">
             <br>
-            <input type="Submit" value="Calculate" id="calculateBtn">
+            <input  type="Submit" value="Calculate" id="calculateBtn">
         </form>
         <div id="summary">
             <p>Tax Ammount: 
                 <span id="taxAmmount">
                     <?=$taxAmount ?>
-                </span>
-            </p>
-            <p>Final Ammount: 
-                <span id="finalAmmount">
-                    <?=$finalAmount ?> 
                 </span>
             </p>
         </div>

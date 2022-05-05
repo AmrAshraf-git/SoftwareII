@@ -1,45 +1,53 @@
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
 }
 
 .content {
-    border: 2px solid rgb(32, 33, 41);
-    width: 230px;
+    border: 2px solid rgb(0, 0, 0);
+    width: 500px;
     padding: 10px 20px;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
+    background-color: gray;
+
 }
 
 .content h1 {
-    font-size: 28px;
-    background-color: midnightblue;
-    color: #fff;
-    padding: 10px 10px;
-    width: 90%;
+    font-size: 50px;
+    font-family: 'Segoe UI';
+    color: rgb(0, 0, 0);
+    width: 100%;
     text-align: center;
 }
 
 input#monetaryAmmount,
 input#taxPercentage {
-    width: 90%;
-    text-align: right;
+    width: 80%;
+
+    text-align: center;
+    font-family: 'Segoe UI';
     padding: 5px;
     margin: 5px 0;
 }
 
 #calculateBtn {
+    font-family: 'Segoe UI';
     width: 100px;
     padding: 5px;
     margin: 5px 0;
     text-align: center;
+    
 }
 
 #summary {
+    width: 99%;
+    font-family: 'Segoe UI';
     background-color: #ccc;
-    width: 95%;
     padding: 2px;
     margin: 5px 0;
+
 }
 
 #summary p {
