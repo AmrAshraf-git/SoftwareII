@@ -1,26 +1,12 @@
 <!DOCTYPE html> 
 <html lang="en"> 
     <head>
-        <title>Tax Calculator - PHP</title>
+        <title>Tax Calculator</title>
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-        <link rel="stylesheet" href="../css/app.css">
+        <link rel="stylesheet" type="text/css" href="{{ url('css/style.css')}}">        
     </head>
 <body>
-
-    <?php
-        // Check if the "Calculate" button was pressed, then get the data from inputs
-        if (isset($_POST['monetaryAmmount']) && isset($_POST['taxPercentage'])) {
-            $monetaryAmmount = (float) $_POST['monetaryAmmount'];
-            $taxPercentage = (float) $_POST['taxPercentage'];
-        } else {
-            $monetaryAmmount = 0;
-            $taxPercentage = 0;
-        }
-        // Make the calculations
-        $taxAmount = round(($monetaryAmmount * $taxPercentage) / 100, 2);
-        $finalAmount = round($monetaryAmmount - $taxAmount, 2);
-    ?>
 
     <div class="content">
         <h1>Tax Calculator - PHP</h1>
